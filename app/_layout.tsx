@@ -23,6 +23,7 @@ const RootLayout = () => {
     if (!fontsLoaded && !error) return null;
 
     return <Slot />;
+    // return <Stack />;
 }
 
 export default RootLayout
