@@ -5,7 +5,12 @@ import React from 'react';
 const TabsLayout = () => {
     return (
         <Tabs screenOptions={{
-            tabBarActiveTintColor: 'green',
+            tabBarActiveTintColor: 'indigo',
+            headerShown: false,
+            // tabBarStyle: {
+            //     backgroundColor: 'blue',
+            // },
+            // tabBarActiveBackgroundColor: 'red',
         }}>
             <Tabs.Screen
                 name='(stack)'
@@ -13,6 +18,16 @@ const TabsLayout = () => {
                     title: 'Stack',
                     tabBarIcon: ({ color }) => (
                         <Ionicons size={28} name='person-add-outline' color={color} />
+                    ),
+                }}
+            />
+
+            <Tabs.Screen
+                name='home/index'
+                options={{
+                    title: 'Home Screen',
+                    tabBarIcon: ({ color }) => (
+                        <Ionicons size={28} name='home-outline' color={color} />
                     ),
                 }}
             />

@@ -4,7 +4,7 @@ import React from 'react';
 const StackLayout = () => {
     return <Stack
         screenOptions={{
-            headerShown: false,
+            headerShown: true,
             headerShadowVisible: false,
             contentStyle: {
                 backgroundColor: 'white',
