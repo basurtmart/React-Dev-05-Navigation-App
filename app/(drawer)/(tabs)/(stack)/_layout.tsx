@@ -12,11 +12,21 @@ const StackLayout = () => {
             return;
         }
 
-        // subir: Stack → Tabs → Drawer
-        navigation
-            .getParent()      // tabs
-            ?.getParent()     // drawer
-            ?.dispatch(DrawerActions.openDrawer());
+        // 🔍 buscar el primer padre que sea drawer
+        let parent = navigation.getParent();
+
+        while (parent) {
+            const state = parent.getState?.();
+
+            if (state?.type === 'drawer') {
+                parent.dispatch(DrawerActions.openDrawer());
+                return;
+            }
+
+            parent = parent.getParent();
+        }
+
+        console.warn('Drawer navigator not found');
     }
 
     return <Stack
