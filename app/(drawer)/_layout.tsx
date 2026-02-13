@@ -8,17 +8,18 @@ const DrawerLayout = () => {
         <Drawer
             drawerContent={CustomDrawer}
             screenOptions={{
-                headerShown: false,
+                // headerShown: false,
                 overlayColor: 'rgba(0,0,0,0.4)',
                 drawerActiveTintColor: 'indigo',
                 headerShadowVisible: false,
-                // sceneContainerStyle: {
-                //     backgroundColor: 'white'
-                // },
+                sceneStyle: {
+                    backgroundColor: 'white'
+                },
             }}>
             <Drawer.Screen
-                name="tabs" // This is the name of the page and must match the url from root
+                name="(tabs)" // This is the name of the page and must match the url from root
                 options={{
+                    headerShown: false,
                     drawerLabel: 'Tabs + Stack',
                     title: 'Tabs + Stack',
                     drawerIcon: ({ color, size }) => (
