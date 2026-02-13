@@ -10,7 +10,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   const onToggleDrawer = () => {
-    navigation.dispatch(DrawerActions.toggleDrawer);
+    navigation.dispatch(DrawerActions.toggleDrawer());
   }
   return (
     <SafeAreaView style={{ flex: 1 }}>
